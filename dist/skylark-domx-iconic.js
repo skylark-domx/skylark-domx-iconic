@@ -1,0 +1,9 @@
+/**
+ * skylark-domx-iconic - The skylark domx iconic library
+ * @author Hudaokeji Co.,Ltd
+ * @version v0.9.0
+ * @link www.skylarkjs.org
+ * @license MIT
+ */
+!function(e,r){var n=r.define,o=r.require,t="function"==typeof n&&n.amd,i=!t&&"undefined"!=typeof exports;if(!t&&!n){var s={};n=r.define=function(e,r,n){"function"==typeof n?(s[e]={factory:n,deps:r.map(function(r){return function(e,r){if("."!==e[0])return e;var n=r.split("/"),o=e.split("/");n.pop();for(var t=0;t<o.length;t++)"."!=o[t]&&(".."==o[t]?n.pop():n.push(o[t]));return n.join("/")}(r,e)}),resolved:!1,exports:null},o(e)):s[e]={factory:null,resolved:!0,exports:n}},o=r.require=function(e){if(!s.hasOwnProperty(e))throw new Error("Module "+e+" has not been defined");var n=s[e];if(!n.resolved){var t=[];n.deps.forEach(function(e){t.push(o(e))}),n.exports=n.factory.apply(r,t)||null,n.resolved=!0}return n.exports}}if(!n)throw new Error("The module utility (ex: requirejs or skylark-utils) is not loaded!");if(function(e,r){e("skylark-domx-iconic/icons",["skylark-utils-dom/dom","skylark-utils-dom/styler"],function(e,r){return e.icons={icon:function(e,r){var n=[],o=langx.clone(r);r.type&&(n.push("fa-"+r.type),delete o.type);r.size&&(size.indexOf(r.size)>-1?n.push("fa-"+r.size):o["font-size"]=r.size,delete o.size);r.fw&&(n.push("fa-fw"),delete o.fw);r.spin&&(n.push("fa-spin"),delete o.spin);r.border&&(n.push("fa-border"),delete o.border);r.angle&&(n.push("fa-rotate-"+r.angle),delete o.angle);styler.addClass(e,n),styler.css(e,o)},stack:function(e,r){}}}),e("skylark-domx-iconic/main",["./icons"],function(e){return e}),e("skylark-domx-iconic",["skylark-domx-iconic/main"],function(e){return e})}(n),!t){var l=o("skylark-langx/skylark");i?module.exports=l:r.skylarkjs=l}}(0,this);
+//# sourceMappingURL=sourcemaps/skylark-domx-iconic.js.map

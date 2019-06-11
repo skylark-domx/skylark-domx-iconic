@@ -1,5 +1,5 @@
 /**
- * skylark-utils-debug - The skylark debug utility library
+ * skylark-domx-iconic - The skylark domx iconic library
  * @author Hudaokeji Co.,Ltd
  * @version v0.9.0
  * @link www.skylarkjs.org
@@ -37,11 +37,16 @@
                 deps: deps.map(function(dep){
                   return absolute(dep,id);
                 }),
+                resolved: false,
                 exports: null
             };
             require(id);
         } else {
-            map[id] = factory;
+            map[id] = {
+                factory : null,
+                resolved : true,
+                exports : factory
+            };
         }
     };
     require = globals.require = function(id) {
@@ -49,14 +54,15 @@
             throw new Error('Module ' + id + ' has not been defined');
         }
         var module = map[id];
-        if (!module.exports) {
+        if (!module.resolved) {
             var args = [];
 
             module.deps.forEach(function(dep){
                 args.push(require(dep));
             })
 
-            module.exports = module.factory.apply(globals, args);
+            module.exports = module.factory.apply(globals, args) || null;
+            module.resolved = true;
         }
         return module.exports;
     };
@@ -80,7 +86,7 @@
 
 })(function(define,require) {
 
-define('skylark-utils-debug/icons',[
+define('skylark-domx-iconic/icons',[
 	"skylark-utils-dom/dom",
 	"skylark-utils-dom/styler"
 ],function(dom,stylers){
@@ -138,14 +144,14 @@ define('skylark-utils-debug/icons',[
 	}
 });
 
-define('skylark-utils-debug/main',[
+define('skylark-domx-iconic/main',[
     "./icons",
 ], function(icons) {
 
 	return icons;
 });
-define('skylark-utils-debug', ['skylark-utils-debug/main'], function (main) { return main; });
+define('skylark-domx-iconic', ['skylark-domx-iconic/main'], function (main) { return main; });
 
 
 },this);
-//# sourceMappingURL=sourcemaps/skylark-utils-debug.js.map
+//# sourceMappingURL=sourcemaps/skylark-domx-iconic.js.map

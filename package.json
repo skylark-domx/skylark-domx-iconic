@@ -1,7 +1,7 @@
 {
-  "name": "skylark-utils-debug",
+  "name": "skylark-domx-iconic",
   "version": "0.9.0",
-  "description": "The skylark debug utility library",
+  "description": "The skylark domx iconic library",
   "main": "-",
   "scripts": {
     "build": "sbundle build .",
@@ -10,7 +10,7 @@
   "homepage": "www.skylarkjs.org",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skylarkjs/skylark-utils-debug.git"
+    "url": "git+https://github.com/skylark-domx/skylark-domx-iconic.git"
   },
   "keywords": [
     "skylark",
