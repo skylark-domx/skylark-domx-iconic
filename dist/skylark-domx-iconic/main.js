@@ -5,5 +5,5 @@
  * @link www.skylarkjs.org
  * @license MIT
  */
-define(["./icons"],function(n){return n});
+define(["./iconic"],function(n){return n});
 //# sourceMappingURL=sourcemaps/main.js.map

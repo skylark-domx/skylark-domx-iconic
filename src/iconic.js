@@ -1,7 +1,7 @@
 define([
-	"skylark-utils-dom/dom",
+	"skylark-langx/skylark",
 	"skylark-utils-dom/styler"
-],function(dom,stylers){
+],function(skylark,stylers){
 	var sizes = ["xs","sm","lg","2x","3x","4x","5x","6x","7x","8x","9x",,"10x"];
 	/*
 	 * @param options
@@ -50,8 +50,8 @@ define([
 
 	}
 
-	return dom.icons = {
+	return skylark.attach("domx.iconic", {
 		icon : icon,
 		stack : stack
-	}
+	});
 });

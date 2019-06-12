@@ -86,10 +86,10 @@
 
 })(function(define,require) {
 
-define('skylark-domx-iconic/icons',[
-	"skylark-utils-dom/dom",
+define('skylark-domx-iconic/iconic',[
+	"skylark-langx/skylark",
 	"skylark-utils-dom/styler"
-],function(dom,stylers){
+],function(skylark,stylers){
 	var sizes = ["xs","sm","lg","2x","3x","4x","5x","6x","7x","8x","9x",,"10x"];
 	/*
 	 * @param options
@@ -138,17 +138,17 @@ define('skylark-domx-iconic/icons',[
 
 	}
 
-	return dom.icons = {
+	return skylark.attach("domx.iconic", {
 		icon : icon,
 		stack : stack
-	}
+	});
 });
 
 define('skylark-domx-iconic/main',[
-    "./icons",
-], function(icons) {
+    "./iconic",
+], function(iconic) {
 
-	return icons;
+	return iconic;
 });
 define('skylark-domx-iconic', ['skylark-domx-iconic/main'], function (main) { return main; });
 

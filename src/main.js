@@ -1,6 +1,6 @@
 define([
-    "./icons",
-], function(icons) {
+    "./iconic",
+], function(iconic) {
 
-	return icons;
+	return iconic;
 });
