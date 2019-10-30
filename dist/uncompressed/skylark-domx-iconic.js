@@ -88,7 +88,7 @@
 
 define('skylark-domx-iconic/iconic',[
 	"skylark-langx/skylark",
-	"skylark-utils-dom/styler"
+	"skylark-domx-styler"
 ],function(skylark,stylers){
 	var sizes = ["xs","sm","lg","2x","3x","4x","5x","6x","7x","8x","9x",,"10x"];
 	/*
