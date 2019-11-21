@@ -26,7 +26,7 @@
   "bugs": "https://github.com/skylarkjs/skylark/issues",
   "dependencies": {
     "skylark-domx-styler": "git+https://github.com/skylark-domx/skylark-domx-styler.git#master",
-    "skylark-langx": "git+https://github.com/skylarklangx/skylark-langx.git#master"
+    "skylark-langx": "git+https://github.com/skylark-langx/skylark-langx.git#master"
   },
   "engines": {
     "node": ">=0.8.0"
